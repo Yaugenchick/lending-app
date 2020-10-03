@@ -1,0 +1,39 @@
+
+
+{
+  "location":  [
+        {
+            "coord": {"lat":53.8525266 , "lng":27.57019043},
+            "zoom": 8,
+            "title": "title1",
+            "id": 1
+        }, {
+            "coord": {"lat":54.68653423 , "lng":25.26855469},
+            "zoom": 8,
+            "title": "title2",
+            "id": 2
+        }, {
+            "coord":  {"lat":56.89700392 , "lng":23.90625},        
+            "zoom": 8,
+            "title": "title3",
+            "id": 3
+        }, {
+            "coord": {"lat":53.63161061 , "lng":23.81835938},
+            "zoom": 8,
+            "title": "title4",
+            "id": 4
+        }, {
+            "coord": {"lat":52.22779942, "lng":20.96191406},
+            "zoom": 8,
+            "title": "title5",
+            "id": 5
+        }, {
+            "coord": {"lat":55.20395326, "lng":30.21240234},
+            "zoom": 8,
+            "title": "title6",
+            "id": 6
+        }
+    ]
+}
+
+
