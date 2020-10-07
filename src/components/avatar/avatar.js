@@ -5,8 +5,11 @@ export const changeAvatar = () => {
              
 
         avatar.forEach( item => {
-            item.addEventListener('mousemove', () => {
+            item.addEventListener('mouseover', () => {
                 item.classList.add('big-avatar');
+            });
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('big-avatar')
             });
         });
             

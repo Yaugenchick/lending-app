@@ -86,7 +86,7 @@ body {
     }
 }
 .infowindow-wraper {
-    width: 400px;
+    width: 200px;
     border-radius: 5px;
     border-radius: 5px;
    
@@ -98,9 +98,9 @@ body {
         text-align: center;
         padding: 6px 12px;
     }
-    img {
+    /*img {
 
-    }
+    }*/
     .infowindow-text {
         font-size: 16px;
         background-color: royalblue;
@@ -251,23 +251,38 @@ body {
 }
 .work-wraper {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: auto;
+    grid-template-rows: 200px 1fr;
     margin: 0 0 70px 0;
     .work-content-top {
         grid-row: 1/2;
-        grid-column: 3/-3;
+        grid-column: 1/2;
+        
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
         .work-content-title {
+            grid-row: 1/2;
+            grid-column: 1/9;
             text-align: center;
             font-size: 30px;
             margin: 50px 0 0 0;
             h1 {
                 padding: 0 0 20px 0;
-                border-bottom: 4px solid #000;
+            }
+            h1::after {
+                content: '';
+                height: 4px;
+                width: 300px;
+                display: block;
+                background-color: #000;
+                margin: 20px auto 0 auto;
             }
 
         }
         .work-content-text {
+            grid-row: 2/3;
+            grid-column: 1/9;
             text-align: center;
             line-height: 20px;
             font-size: 16px;
@@ -276,8 +291,9 @@ body {
 
     }
     .work-content-body {
-        grid-column: 1/-1;
-        grid-row: 2/-1;
+        grid-column: 1/2;
+        grid-row: 2/3;
+
         display: grid;
         grid-auto-rows: auto;
         grid-auto-columns: auto;
@@ -285,7 +301,7 @@ body {
         column-gap: 50px;
         margin: 60px 0 0 0;
         .pillter {
-            grid-column: 1/3;
+            grid-column: 1/2;
             grid-row: 1/2;
             align-self: center;
             justify-self: center;
@@ -297,7 +313,7 @@ body {
 
         }
         .touchmania {
-            grid-column: 3/5;
+            grid-column: 2/3;
             grid-row: 1/2;
             align-self: center;
             justify-self: center;
@@ -309,7 +325,7 @@ body {
 
         }
         .locate {
-            grid-column: 5/7;
+            grid-column: 3/4;
             grid-row: 1/2;
             align-self: center;
             justify-self: center;
@@ -321,7 +337,7 @@ body {
 
         }
         .umberapp {
-            grid-column: 1/3;
+            grid-column: 1/2;
             grid-row: 2/3;
             align-self: center;
             justify-self: center;
@@ -333,14 +349,14 @@ body {
 
         }
         .youtube {
-            grid-column: 3/5;
+            grid-column: 2/3;
             grid-row: 2/3;
             align-self: center;
             justify-self: center;
             box-shadow: 0 0 4px 1px #ccc;
         }
         .pardio {
-            grid-column: 5/7;
+            grid-column: 3/4;
             grid-row: 2/3;
             align-self: center;
             justify-self: center;
@@ -352,7 +368,7 @@ body {
 
         }
         .banadediki {
-            grid-column: 1/3;
+            grid-column: 1/2;
             grid-row: 3/4;
             align-self: center;
             justify-self: center;
@@ -363,7 +379,7 @@ body {
 
         }
         .bizcorner {
-            grid-column: 3/5;
+            grid-column: 2/3;
             grid-row: 3/4;
             align-self: center;
             justify-self: center;
@@ -375,7 +391,7 @@ body {
 
         }
         .arabul {
-            grid-column: 5/7;
+            grid-column: 3/4;
             grid-row: 3/4;
             align-self: center;
             justify-self: center;
@@ -401,21 +417,32 @@ body {
     .team-content-top{
         grid-row: 1/2;
         margin: 50px 0 0 0;
+
         display: grid;
         grid-auto-rows: auto;
-        grid-template-columns: repeat(8, 1fr);
+        grid-auto-columns: auto;
         justify-items: center;
         .team-content-title {
-            grid-column: 4/-4;
+            grid-column: 1/9;
+            grid-row: 1/2;
             h1 {
+                text-align: center;
                 font-size: 30px;
                 padding: 0 38px 20px 38px;
-                border-bottom: 4px solid #000;
+            }
+            h1::after {
+                content: '';
+                height: 4px;
+                width: 180px;
+                display: block;
+                background-color: #000;
+                margin: 20px auto 0 auto;
             }
 
         }
         .team-content-text {
-            grid-column: 3/-3;
+            grid-column: 1/9;
+            grid-row: 2/3;
             margin: 30px 0 0 0;
             p {
                 font-size: 16px;
@@ -429,9 +456,27 @@ body {
     .team-user-list {
         grid-row: 2/3;
         margin: 30px 0 80px 0;
+
         display: grid;
         column-gap: 20px;
-        grid-template-columns: repeat(4, 1fr);
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+        .lead-developer {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .lead-designer {
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .marketing-director {
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+        .business-director {
+            grid-row: 1/2;
+            grid-column: 4/5;
+        }
         .lead-developer , .lead-designer , .marketing-director , .business-director {
             background-color: #fff;
             box-shadow: 0 0 4px 1px #ccc;
@@ -446,8 +491,7 @@ body {
                 border-radius: 50%;
                 background-color: #ededed;
                 margin: 20px 0 0 0;
-            }
-                
+            }  
             .name-developer , .name-designer , .name-marketing-director , .name-business-director {
                 font-size: 16px;
                 font-weight: bold;
@@ -476,50 +520,59 @@ body {
 .contact-wraper {
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(10, 1fr);
-    column-gap: 40px;
-    margin: 0 0 70px 0;
+    grid-auto-columns: auto;
     .contact-title {
-        grid-column: 5/-5;
-        justify-self: center;
-        margin: 55px 0 0 0;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: 50px 0 0 0;
         h1 {
             font-size: 30px;
-            padding:  0 38px 20px 38px;
-            border-bottom: 4px solid #000;
+            text-align: center;
+        }
+        h1::after {
+            content: '';
+            height: 4px;
+            width: 180px;
+            display: block;
+            background-color: #000;
+            margin: 20px auto 0 auto;
         }
 
     }
-    .map-wraper {
-        grid-column: 1/5;
-     
-        .map-title {
-            margin: 50px 0 30px 0;
-            font-size: 16px;
-            color: #5a5a5a;
-        }
-        #map {
-            height: 325px;
-            box-shadow: 0 0 4px 1px #ccc;
-        }
+    .wraper-map-and-contact {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin: 50px 0 75px 0;
 
-    }
-    .contact-form-wraper {
-        grid-column: 5/-1;
-        
-        .form-title {
-            margin: 50px 0 30px 0;
-            font-size: 16px;
-            color: #5a5a5a;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+        column-gap: 40px;
+        .map-wraper {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            .map-title {
+                font-size: 16px;
+            }
+            #map {
+                margin: 30px 0 0 0;
+                height: 325px;
+                width: 450px;
+                box-shadow: 0 0 4px 1px #ccc;
+            }
+
         }
-        .form-wraper {
-
-            form {
-
+        .contact-form-wraper {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            .form-title {
+                font-size: 16px;
+            }
+            .form-wraper {
+                margin: 30px 0 0 0;
                 textarea {
-                    width: 94.5%;
                     height: 220px;
-                    padding: 25px 0 0 30px;
+                    padding: 25px 270px 0 30px;
                     border: none;
                     font-size: 16px;
                     box-shadow: 0 0 4px 1px #ccc;
@@ -539,11 +592,10 @@ body {
                     background-color: #ccc;
                 }
                 .input-wraper {
-
                     input[type="email"] {
                         height: 60px;
-                        width: 370px;
-                        padding: 0 0 0 30px;
+                      
+                        padding: 0 200px 0 30px;
                         border: none;
                         box-shadow: 0 0 4px 1px #ccc;
                         margin: 15px 0 0 0;
@@ -557,8 +609,8 @@ body {
                         text-transform: uppercase;
                         color: #fff;
                         background-color: #6995a9;
-                        padding: 20px 65.5px;
-                        border: none;
+                        padding: 19px 45px;
+                        border: 2px solid #fff;
                         box-shadow: 0 0 4px 1px #ccc;
                         margin: 15px 0 0 15px;
                         img {
@@ -603,189 +655,304 @@ body {
     #menu-toggle {
       display: block !important;
     }
-       
     .work-wraper {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 200px 1fr ;
-        margin: 0 0 70px 0;
+        grid-auto-columns: auto;
+        grid-template-rows: 200px 1fr;
+        justify-items: center;
+        align-items: center;
         .work-content-top {
             grid-row: 1/2;
-            .work-content-title {
-         
-                h1 {
-                    border-bottom: 2px solid #000;
-                    font-size: 25px;
-                }
-
-            }
-
+            grid-column: 1/2;
         }
         .work-content-body {
+            grid-row: 2/3;
+            grid-column: 1/2;
+
             display: grid;
             grid-auto-columns: auto;
             grid-auto-rows: auto;
-            row-gap: 50px;
-            column-gap: 50px;
-            margin: 60px 0 0 0;
-
             .pillter {
-                grid-column: 1/2;
                 grid-row: 1/2;
+                grid-column: 1/2;
                 img {
-                    width: 380px;
+                    width: 350px;
                 }
-
             }
             .touchmania {
-                grid-column: 2/3;
                 grid-row: 1/2;
-                    img {
-                        width: 380px;
+                grid-column: 2/3;
+                img {
+                    width: 360px;
                 }
-
             }
             .locate {
-                grid-column: 1/2;
                 grid-row: 2/3;
-                    img {
-                        width: 380px;
+                grid-column: 1/2;
+                  img {
+                    width: 360px;
                 }
-
             }
             .umberapp {
-                grid-column: 2/3;
                 grid-row: 2/3;
-                    img {
-                        width: 380px;
+                grid-column: 2/3;
+                  img {
+                    width: 360px;
                 }
-
             }
             .youtube {
-                grid-column: 1/2;
                 grid-row: 3/4;
-                iframe {
-                    width: 380px;
-                    height: 242px;
+                grid-column: 1/2;
+                  iframe {
+                    width: 360px;
+                    height: 235px;
                 }
-
             }
             .pardio {
-                grid-column: 2/3;
                 grid-row: 3/4;
-                img {
-                    width: 380px;
+                grid-column: 2/3;
+                  img {
+                    width: 360px;
                 }
-
             }
             .banadediki {
-                grid-column: 1/2;
                 grid-row: 4/5;
-                    img {
-                        width: 380px;
+                grid-column: 1/2;
+                  img {
+                    width: 360px;
                 }
-
             }
             .bizcorner {
-                grid-column: 2/3;
                 grid-row: 4/5;
-                    img {
-                        width: 380px;
+                grid-column: 2/3;
+                  img {
+                    width: 360px;
                 }
-
             }
             .arabul {
-                grid-column: 1/2;
                 grid-row: 5/6;
-                    img {
-                        width: 380px;
+                grid-column: 1/2;
+                  img {
+                    width: 360px;
                 }
-
             }
 
         }
 
     }
-    .team-wraper {
-     
-        .team-content-top{
-       
-            .team-content-title {
-             
-                h1 {
-                    font-size: 25px;
-                    padding: 0 38px 20px 38px;
-                    border-bottom: 2px solid #000;
-                }
-
-            }
-            .team-content-text {
-                grid-column: 2/8;
-                margin: 30px 0 0 0;
-                p {
-                    font-size: 16px;
-                    line-height: 20px;
-                    text-align: center;
-                }
-
-            }
-
-        }
-
-    }
-    
     .contact-wraper {
 
-        .contact-title {
-   
-            h1 {
-                font-size: 25px;
-                padding:  0 38px 20px 38px;
-                border-bottom: 2px solid #000;
+        .wraper-map-and-contact {
+
+            .map-wraper {
+
+                #map {
+                    height: 320px;
+                    width: 300px;
+                }
             }
+            .contact-form-wraper {
 
-        }
-        .contact-form-wraper {
-        
-            .form-wraper {
-
-                 form {
+                .form-wraper {
 
                     textarea {
-                        width: 93%;
-                        height: 220px;
-                        padding: 25px 0 0 30px;
-                        border: none;
-                        box-shadow: 0 0 4px 1px #ccc;
-                    }
-                    textarea:focus {
-                        outline: none;
+                        padding: 25px 160px 0 30px;
                     }
                     .input-wraper {
 
                         input[type="email"] {
-                            height: 60px;
-                            width: 270px;
-                            padding: 0 0 0 30px;
-                            border: none;
-                            box-shadow: 0 0 4px 1px #ccc;
-                            margin: 15px 0 0 0;
-                        }
-                        input[type="email"]:focus {
-                            outline: none;
+                            padding: 0 100px 0 30px;
                         }
                         .btn-form-send {
-                            font-size: 16px;
-                            font-weight: 500;
-                            text-transform: uppercase;
-                            color: #fff;
-                            background-color: #6995a9;
-                            padding: 20px 39px;
-                            border: none;
-                            box-shadow: 0 0 4px 1px #ccc;
-                            margin: 15px 0 0 15px;
-                        img {
-                            margin: 0 15px 0 0;
+                            padding: 19px 35px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }     
+
+}
+@media(max-width: 768px) {
+    #header {
+
+        .container {
+            width: 100%;
+            .header-wraper {
+
+                .logo-wraper {
+                    justify-self: center;
+                }
+                #menu-toggle {
+                    margin: 0 40px 0 0;
+                }
+            }
+        }
+    }
+    #work {
+
+        .container {
+            width: 100%;
+            .work-wraper {
+
+                .work-content-top {
+
+                    .work-content-title {
+
+                        h1 {
+                            font-size: 30px;
+                        }
+
+                    }
+
+                }
+                .work-content-body {
+
+                    .pillter {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                    }
+                    .touchmania {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                    }
+                    .locate {
+                        grid-row: 3/4;
+                        grid-column: 1/2;
+                    }
+                    .umberapp {
+                        grid-row: 4/5;
+                        grid-column: 1/2;
+                    }
+                    .yuotube {
+                        grid-row: 5/6;
+                        grid-column: 1/2;
+                    }
+                    .pardio {
+                        grid-row: 6/7;
+                        grid-column: 1/2;
+                    }
+                    .banadediki {
+                        grid-row: 7/8;
+                        grid-column: 1/2;
+                    }
+                    .bizcorner {
+                        grid-row: 8/9;
+                        grid-column: 1/2;
+                    }
+                    .arabul {
+                        grid-row: 9/10;
+                        grid-column: 1/2;
+                    }
+                    #modal {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    #team {
+
+        .container {
+            width: 100%;
+            .team-wraper {
+
+                .team-content-top {
+
+                    .team-content-title {
+
+                        h1 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+                .team-user-list {
+                    row-gap: 30px;
+                    .lead-developer {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                    }
+                    .lead-developer:hover {
+                        transition: .2s ease-in ; box-shadow: 0 0 3px 4px #ccc;
+                    }
+                    .lead-designer {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                    }
+                    .lead-designer:hover {
+                        transition: .2s ease-in ; box-shadow: 0 0 3px 4px #ccc;
+                    }
+                    .marketing-director {
+                        grid-row: 3/4;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                    }
+                    .marketing-director:hover {
+                        transition: .2s ease-in ; box-shadow: 0 0 3px 4px #ccc;
+                    }
+                    .business-director {
+                        grid-row: 4/5;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                    }
+                    .business-director:hover {
+                        transition: .2s ease-in ; box-shadow: 0 0 3px 4px #ccc;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    #contact {
+
+        .container {
+            width: 100%;
+            .contact-wraper {
+
+                .contact-title {
+
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
+                .wraper-map-and-contact {
+                    row-gap: 30px;
+                    .map-wraper {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                        #map {
+                            width: 100%;
+                        }
+                    }
+                    .contact-form-wraper {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                        margin: 0 60px;
+                        textarea {
+                            width: 71%;
+                        }
+                        .input-wraper {
+
+                            input[type="email"]{
+                                width: 50%;
+                            }
+                            .btn-form-send {
+                                padding: 19px 47px;
                             }
 
                         }
@@ -799,543 +966,13 @@ body {
         }
 
     }
-
-}
-
-@media (max-width: 768px) {
-             
-    .work-wraper {
-       
-        .work-content-body {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: auto;
-            row-gap: 50px;
-            column-gap: 50px;
-            margin: 60px 0 0 0;
-
-            .pillter {
-                grid-column: 1/2;
-                grid-row: 1/2;
-                img {
-                    width: 580px;
-                }
-
-            }
-            .touchmania {
-                grid-column: 1/2;
-                grid-row: 2/3;
-                    img {
-                        width: 580px;
-                }
-
-            }
-            .locate {
-                grid-column: 1/2;
-                grid-row: 3/4;
-                    img {
-                        width: 580px;
-                }
-
-            }
-            .umberapp {
-                grid-column: 1/2;
-                grid-row: 4/5;
-                    img {
-                        width: 580px;
-                }
-
-            }
-            .youtube {
-                grid-column: 1/2;
-                grid-row: 5/6;
-                iframe {
-                    width: 580px;
-                    height: 370px;
-                }
-
-            }
-            .pardio {
-                grid-column: 1/2;
-                grid-row: 6/7;
-                img {
-                    width: 580px;
-                }
-
-            }
-            .banadediki {
-                grid-column: 1/2;
-                grid-row: 7/8;
-                    img {
-                        width: 580px;
-                }
-
-            }
-            .bizcorner {
-                grid-column: 1/2;
-                grid-row: 8/9;
-                    img {
-                        width: 580px;
-                }
-
-            }
-            .arabul {
-                grid-column: 1/2;
-                grid-row: 9/10;
-                    img {
-                        width: 580px;
-                }
-
-            }
-
-        }
-
-    }
-    .contact-wraper {
-        margin: 0 0 15px 0;
-        .contact-title {
-            grid-column: 5/-5;
-            grid-row: 1/2;
-            justify-self: center;
-            margin: 55px 0 0 0;
-            h1 {
-                border-bottom: 2px solid #000;
-            }
-
-        }
-        .map-wraper {
-            grid-column: 1/11;
-            grid-row: 2/3;
-            .map-title {
-                margin: 30px 0 30px 0;
-            }
-            #map {
-                height: 225px;
-            }
-
-        }
-        .contact-form-wraper {
-            grid-column: 1/11;
-            grid-row: 3/4;
-            .form-title {
-                margin: 30px 0 30px 0;
-            }
-            .form-wraper {
-    
-                form {
-    
-                    textarea {
-                        width: 95%;
-                        height: 120px;
-                    }
-                    .input-wraper {
-    
-                        input[type="email"] {
-                            height: 45px;
-                            width: 360px;
-                        }
-                        .btn-form-send {
-                            padding: 13px 64px;
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }  
-
-}
-
-@media (max-width: 425px) {
-    .networks {
-        padding: 6px;
-        left: 30px;
-        bottom: 30px;
-    }
-    #header {
-
-        .header-wraper {
-
-            .logo-wraper {
-                padding: 20px 0;
-            }
-        }
-    }
-    .hero-wraper-sliders {
-
-        .slide-wraper {
-
-            .slide-content {
-
-                .title {
-                    font-size: 25px;
-                }
-                .text {
-                    text-align: center;
-                }
-            }
-        }
-    }
-    .container {
-        width: 100%;
-        .header-wraper {
-       
-            .logo-wraper {
-                padding: 25px 0;
-                justify-self: center;
-            }
-            .nav-wraper {
-                justify-self: flex-end;
-                align-self: center;
-            }
+    #footer {
         
-        }   
-        .work-wraper {
-            row-gap: 40px;
-
-            .work-content-body {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-auto-rows: auto;
-                row-gap: 50px;
-                column-gap: 50px;
-                margin: 60px 0 0 0;
-
-                .pillter {
-                    grid-column: 1/2;
-                    grid-row: 1/2;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .touchmania {
-                    grid-column: 1/2;
-                    grid-row: 2/3;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .locate {
-                    grid-column: 1/2;
-                    grid-row: 3/4;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .umberapp {
-                    grid-column: 1/2;
-                    grid-row: 4/5;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .youtube {
-                    grid-column: 1/2;
-                    grid-row: 5/6;
-                    iframe {
-                        width: 350px;
-                        height: 220px;
-                    }
-
-                }
-                .pardio {
-                    grid-column: 1/2;
-                    grid-row: 6/7;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .banadediki {
-                    grid-column: 1/2;
-                    grid-row: 7/8;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .bizcorner {
-                    grid-column: 1/2;
-                    grid-row: 8/9;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-                .arabul {
-                    grid-column: 1/2;
-                    grid-row: 9/10;
-                    img {
-                        width: 350px;
-                    }
-
-                }
-
+        .container {
+            width: 100%;
+            .footer-wraper {
+                margin: 0 60px;
             }
-
         }
-  
-
     }
-    #team {
-    
-        .team-wraper {
-            display: grid;
-            grid-auto-rows: auto;
-            row-gap: 60px;
-            .team-content-top{
-                grid-row: 1/2;
-                margin: 50px 0 0 0;
-                display: grid;
-                grid-auto-rows: auto;
-                grid-template-columns: repeat(8, 1fr);
-                justify-items: center;
-                .team-content-title {
-                    grid-column: 4/-4;
-                    //h1 {
-                    //font-size: 30px;
-                    //padding: 0 38px 20px 38px;
-                    //border-bottom: 4px solid #000;
-                    //}
-
-                }
-                .team-content-text {
-                    grid-column: 3/-3;
-                    margin: 30px 0 0 0;
-                    p {
-                        font-size: 16px;
-                        line-height: 20px;
-                        text-align: center;
-                    }
-
-                }
-
-            }
-            .team-user-list {
-                grid-template-columns: none;
-                .lead-developer , .lead-designer , .marketing-director , .business-director {
-                    margin: 30px 0 0 0;
-                }
-
-            }
-
-        }
-
-    }
-    .contact-wraper {
-        margin: 0 0 15px 0;
-        .contact-title {
-            grid-column: 5/-5;
-            grid-row: 1/2;
-            justify-self: center;
-            margin: 55px 0 0 0;
-            h1 {
-                border-bottom: 2px solid #000;
-            }
-
-        }
-        .map-wraper {
-            grid-column: 1/11;
-            grid-row: 2/3;
-            justify-self: center;
-            .map-title {
-                text-align: center;
-                margin: 30px 0 30px 0;
-            }
-            #map {
-                height: 150px;
-                width: 390px;
-
-            }
-
-        }
-        .contact-form-wraper {
-              
-            .form-title {
-                text-align: center;
-            }
-            .form-wraper {
-              
-                form {
-
-                    textarea {
-                        width: 360px;
-                        height: 120px;
-                        margin-left: 20px;
-                    }
-                    .input-wraper {
-
-                        input[type="email"] {
-                            height: 45px;
-                            width: 270px;
-                            margin-left: 20px;
-                        }
-                        .btn-form-send {
-                            margin-left: 20px;
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }   
-  
-} 
-@media(max-width: 375px) {
-    .contact-wraper {
-
-        .map-wraper {
-
-            #map {
-                width: 300px;
-            }
-
-        }
-        .contact-form-wraper {
-
-            .form-wraper {
-
-                form {
-
-                    textarea {
-                        width: 300px;
-                    }
-                    .input-wraper {
-
-                        input {
-                            width: 240px;
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
-
 }
-@media(max-width: 320px) {
-    .work-wraper {
-
-        .work-content-top {
-
-            .work-content-title {
-                grid-column: 2/6;
-            }
-            .work-content-text {
-                grid-column: 2/6;
-            }
-
-        }
-        .work-content-body {
-            column-gap: 0;
-
-            .pillter {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .touchmania {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .locate {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .umberapp {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .youtube {
-
-                iframe {
-                    width: 280px;
-                }
-            }
-            .pardio {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .banadediki {
-
-                img {
-                    width: 280px;
-            }
-            .bizcorner {
-
-                img {
-                    width: 280px;
-                }
-            }
-            .arabul {
-
-                img {
-                    width: 280px;
-                }
-
-            }
-
-        }
-
-    }
-    .contact-wraper {
-
-        .map-wraper {
-
-            #map {
-                width: 280px;
-            }
-
-        }
-        .contact-form-wraper {
-
-            .form-wraper {
-
-                form {
-
-                    textarea {
-                        width: 280px;
-                    }
-                    .input-wraper {
-
-                        input {
-                            width: 240px;
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
-
-    }
-}  
