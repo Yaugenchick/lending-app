@@ -1,11 +1,9 @@
-import  downArrow  from '../../image/arrowDown.png';
+import downArrow from '../../image/arrowDown.png';
 import twitter from '../../networks/twitter.png';
 import Github from '../../networks/Github.png';
 import facebook from '../../networks/facebook.png';
 import Instagram from '../../networks/Instagram.png';
 import dribbble from '../../networks/dribbble.png';
-
-
 
 const buttonNetworks = () => {
     const button = document.createElement('button'),
@@ -31,6 +29,7 @@ const addNetworksToDOM = () => {
     const button = document.querySelector('.networks');
     
     if(!button) return;
+
     let div = document.createElement('div');
         div.classList.add('div')
         div.innerHTML = networksHtml();
@@ -41,6 +40,7 @@ const addNetworksToDOM = () => {
 export const createNetworks = () => {
    
     buttonNetworks ()
+
     let networks = document.querySelector('.networks');
     networks.addEventListener('click', function () {
         addNetworksToDOM();

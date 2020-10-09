@@ -63,6 +63,7 @@ body {
     &:focus {
         outline: none;
     }
+
 }
 .icons {
     position: fixed;
@@ -84,6 +85,7 @@ body {
     .close-icons:focus {
         outline: none;
     }
+
 }
 .infowindow-wraper {
     width: 200px;
@@ -107,6 +109,7 @@ body {
         text-align: center;
         padding: 4px 10px;
     }
+
 }
 .toggle-list {
     border: none;
@@ -119,7 +122,7 @@ body {
 
     position: fixed;
     top: 120px;
-    right: 3px;
+    right: 35px;
     & li:not(:first-child) {
         margin: 20px 0 0 0;
     }
@@ -131,10 +134,15 @@ body {
             color: #4c4c4c;
             font-size: 16px; 
         } 
+
     }
+
 }
 .open-media-menu {
     display: block;
+}
+.rotate-gamburger {
+    transition: .2s ease-in ; transform: rotateZ(-90deg);
 }
 #header {
     position: sticky;
@@ -180,11 +188,11 @@ body {
                 display: none;
                 border: none;
                 background-color: transparent;
-        
                 span::before {
                     content: '\2807';
                     font-size: 2rem;
                     color: #4c4c4c;
+                   
                 }
     
             }
@@ -491,6 +499,7 @@ body {
                 border-radius: 50%;
                 background-color: #ededed;
                 margin: 20px 0 0 0;
+                overflow: hidden;
             }  
             .name-developer , .name-designer , .name-marketing-director , .name-business-director {
                 font-size: 16px;
@@ -592,6 +601,7 @@ body {
                     background-color: #ccc;
                 }
                 .input-wraper {
+
                     input[type="email"] {
                         height: 60px;
                       
@@ -600,9 +610,9 @@ body {
                         box-shadow: 0 0 4px 1px #ccc;
                         margin: 15px 0 0 0;
                     }
-                       input[type="email"]:focus {
-                           outline: none;
-                       }
+                    input[type="email"]:focus {
+                        outline: none;
+                    }
                     .btn-form-send {
                         font-size: 16px;
                         font-weight: 500;
@@ -678,6 +688,7 @@ body {
                 img {
                     width: 350px;
                 }
+
             }
             .touchmania {
                 grid-row: 1/2;
@@ -685,6 +696,7 @@ body {
                 img {
                     width: 360px;
                 }
+
             }
             .locate {
                 grid-row: 2/3;
@@ -692,6 +704,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
             .umberapp {
                 grid-row: 2/3;
@@ -699,6 +712,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
             .youtube {
                 grid-row: 3/4;
@@ -707,6 +721,7 @@ body {
                     width: 360px;
                     height: 235px;
                 }
+
             }
             .pardio {
                 grid-row: 3/4;
@@ -714,6 +729,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
             .banadediki {
                 grid-row: 4/5;
@@ -721,6 +737,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
             .bizcorner {
                 grid-row: 4/5;
@@ -728,6 +745,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
             .arabul {
                 grid-row: 5/6;
@@ -735,6 +753,7 @@ body {
                   img {
                     width: 360px;
                 }
+
             }
 
         }
@@ -750,6 +769,7 @@ body {
                     height: 320px;
                     width: 300px;
                 }
+
             }
             .contact-form-wraper {
 
@@ -791,8 +811,11 @@ body {
                 #menu-toggle {
                     margin: 0 40px 0 0;
                 }
+
             }
+
         }
+
     }
     #work {
 
@@ -873,7 +896,9 @@ body {
                         h1 {
                             font-size: 30px;
                         }
+
                     }
+
                 }
                 .team-user-list {
                     row-gap: 30px;
@@ -928,6 +953,7 @@ body {
                     h1 {
                         font-size: 30px;
                     }
+
                 }
                 .wraper-map-and-contact {
                     row-gap: 30px;
@@ -936,23 +962,35 @@ body {
                         grid-column: 1/2;
                         margin: 0 60px;
                         #map {
-                            width: 100%;
+                            width: 646px;
                         }
+
                     }
                     .contact-form-wraper {
                         grid-row: 2/3;
                         grid-column: 1/2;
                         margin: 0 60px;
-                        textarea {
-                            width: 71%;
-                        }
-                        .input-wraper {
+                        form {
 
-                            input[type="email"]{
-                                width: 50%;
+                            textarea {
+                                padding: 25px 0 0 0px;
+                                width: 646px;
                             }
-                            .btn-form-send {
-                                padding: 19px 47px;
+                            textarea::placeholder {
+                                margin: 0 0 0 20px;
+                            }
+                            .input-wraper {
+    
+                                input[type="email"]{
+                                    padding: 0 0 0 0px;
+                                    width: 454px;
+                                }
+                                .btn-form-send {
+                                    padding: 0;
+                                    width: 174px;
+                                    height: 59px;
+                                }
+    
                             }
 
                         }
@@ -973,6 +1011,171 @@ body {
             .footer-wraper {
                 margin: 0 60px;
             }
+
         }
+
     }
+
+}
+@media(max-width: 425px) {
+    .header-wraper {
+
+        .logo-wraper {
+            justify-self: right;
+        }
+
+    }
+    .hero-wraper-sliders {
+
+        .slide-wraper {
+
+            .slide-content {
+
+                .title {
+                    font-size: 30px;
+                }
+                .text {
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+    }
+    .work-wraper {
+
+        .work-content-body {
+
+            .pillter {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .touchmania {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .location {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .umberapp {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .youtube {
+                margin: 0;
+                iframe {
+                    width: 300px;
+                }
+
+            }
+            .pardio {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .banadediki {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .bizcorner {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+            .arabul {
+                margin: 0;
+                img {
+                    width: 300px;
+                }
+
+            }
+
+        }
+
+    }
+    .team-wraper {
+        grid-template-rows: 240px 1fr;
+        .team-user-list {
+
+            .lead-developer, .lead-designer, .marketing-director, .business-director {
+                margin: 0 20px;
+            }
+
+        }
+
+    }
+    .contact-wraper {
+
+        .wraper-map-and-contact {
+            display: none;
+            .map-wraper {
+                margin: 0 20px;
+                #map {
+                    width: 305px;
+                    height: 200px;
+                }
+
+            }
+            .contact-form-wraper {
+                display: none;
+                margin: 0 20px;
+                .form-wraper {
+                    display: grid;
+                    grid-auto-rows: auto;
+                    grid-auto-columns: auto;
+                    textarea {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                        width: 305px;
+                        height: 140px;
+                    }
+                    .input-wraper {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+
+                        display: grid;
+                        grid-auto-rows: auto;
+                        grid-auto-columns: auto;
+                        input {
+                            width: 305px;
+                            grid-row: 1/2;
+                            grid-column: 1/2;
+                        }
+                        .btn-form-send {
+                            grid-row: 2/3;
+                            grid-column: 1/2;
+                            width: 305px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
 }

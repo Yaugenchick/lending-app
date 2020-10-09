@@ -50,3 +50,4 @@ export const modal = () => {
                     //console.log('src',src ,'item', item.attributes.src.nodeValue);
                     //item.classList.add('popup');
                     //modal.classList.add('open');
+                    // добавить функцию проверки screen по условию отменять слушатели и не применять классы

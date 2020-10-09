@@ -514,6 +514,7 @@ body {
   border-radius: 50%;
   background-color: #ededed;
   margin: 20px 0 0 0;
+  overflow: hidden;
 }
 
 .team-wraper .team-user-list .lead-developer .name-developer, .team-wraper .team-user-list .lead-developer .name-designer, .team-wraper .team-user-list .lead-developer .name-marketing-director, .team-wraper .team-user-list .lead-developer .name-business-director, .team-wraper .team-user-list .lead-designer .name-developer, .team-wraper .team-user-list .lead-designer .name-designer, .team-wraper .team-user-list .lead-designer .name-marketing-director, .team-wraper .team-user-list .lead-designer .name-business-director, .team-wraper .team-user-list .marketing-director .name-developer, .team-wraper .team-user-list .marketing-director .name-designer, .team-wraper .team-user-list .marketing-director .name-marketing-director, .team-wraper .team-user-list .marketing-director .name-business-director, .team-wraper .team-user-list .business-director .name-developer, .team-wraper .team-user-list .business-director .name-designer, .team-wraper .team-user-list .business-director .name-marketing-director, .team-wraper .team-user-list .business-director .name-business-director {
@@ -895,27 +896,142 @@ body {
     margin: 0 60px;
   }
   #contact .container .contact-wraper .wraper-map-and-contact .map-wraper #map {
-    width: 100%;
+    width: 646px;
   }
   #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper {
     grid-row: 2/3;
     grid-column: 1/2;
     margin: 0 60px;
   }
-  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper textarea {
-    width: 71%;
+  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper form textarea {
+    padding: 25px 0 0 0px;
+    width: 646px;
   }
-  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper .input-wraper input[type="email"] {
-    width: 50%;
+  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper form .input-wraper input[type="email"] {
+    padding: 0 0 0 0px;
+    width: 454px;
   }
-  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper .input-wraper .btn-form-send {
-    padding: 19px 47px;
+  #contact .container .contact-wraper .wraper-map-and-contact .contact-form-wraper form .input-wraper .btn-form-send {
+    padding: 0;
+    width: 174px;
+    height: 59px;
   }
   #footer .container {
     width: 100%;
   }
   #footer .container .footer-wraper {
     margin: 0 60px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-wraper .logo-wraper {
+    justify-self: right;
+  }
+  .hero-wraper-sliders .slide-wraper .slide-content .title {
+    font-size: 30px;
+  }
+  .hero-wraper-sliders .slide-wraper .slide-content .text {
+    text-align: center;
+  }
+  .work-wraper .work-content-body .pillter {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .pillter img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .touchmania {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .touchmania img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .location {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .location img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .umberapp {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .umberapp img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .youtube {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .youtube iframe {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .pardio {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .pardio img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .banadediki {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .banadediki img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .bizcorner {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .bizcorner img {
+    width: 300px;
+  }
+  .work-wraper .work-content-body .arabul {
+    margin: 0;
+  }
+  .work-wraper .work-content-body .arabul img {
+    width: 300px;
+  }
+  .team-wraper {
+    grid-template-rows: 240px 1fr;
+  }
+  .team-wraper .team-user-list .lead-developer, .team-wraper .team-user-list .lead-designer, .team-wraper .team-user-list .marketing-director, .team-wraper .team-user-list .business-director {
+    margin: 0 20px;
+  }
+  .contact-wraper .wraper-map-and-contact .map-wraper {
+    margin: 0 20px;
+  }
+  .contact-wraper .wraper-map-and-contact .map-wraper #map {
+    width: 305px;
+    height: 200px;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper {
+    display: none;
+    margin: 0 20px;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper .form-wraper {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper .form-wraper textarea {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 305px;
+    height: 140px;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper .form-wraper .input-wraper {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper .form-wraper .input-wraper input {
+    width: 305px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .contact-wraper .wraper-map-and-contact .contact-form-wraper .form-wraper .input-wraper .btn-form-send {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 305px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

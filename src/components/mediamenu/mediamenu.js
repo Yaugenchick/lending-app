@@ -5,11 +5,13 @@ export const menu = () => {
             mediamenu = document.querySelector(selectorMenu);
       
         const openMenu = () => {
+            gamburger.classList.toggle('rotate-gamburger')
             mediamenu.classList.toggle('open-media-menu');
         };
 
         gamburger.addEventListener('click',openMenu)
        
     };
+    
     bindMenu('menu-toggle', '.toggle-list');
 };
